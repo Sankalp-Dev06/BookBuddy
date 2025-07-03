@@ -903,6 +903,11 @@ def get_popular_books_fallback(reason):
     except Exception as e:
         print(f"Error getting popular books fallback: {e}")
         return jsonify([])
+    
+@app.route('/')
+def index():
+    return jsonify({"message": "Welcome to BookBuddy API"}), 200
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

@@ -1,5 +1,5 @@
 # Core ML & Data Science
-torch==2.2.1
+torch==2.7.1
 pandas==2.2.1
 numpy==1.26.4
 scikit-learn==1.4.1

@@ -1,0 +1,40 @@
+# Python cache and environment folders
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.env
+.venv/
+venv/
+ENV/
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Model files (optional)
+models/*.pth
+
+# Data files (if sensitive or large)
+data/
+*.csv
+*.json
+*.npz
+*.xlsx
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Checkpoint & training outputs
+eval_results/
+output/
+logs/
+
+# Jupyter notebooks (optional)
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db

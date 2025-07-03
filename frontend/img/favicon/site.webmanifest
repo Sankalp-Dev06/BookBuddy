@@ -1,0 +1,14 @@
+{
+  "name": "BookBuddy",
+  "short_name": "BookBuddy",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#4A90E2",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

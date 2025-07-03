@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBuddy</title>
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <i class="fa-solid fa-book"></i>
+          <span>BookBuddy</span>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" data-page="home">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="explore">
+              <i class="fa-solid fa-compass"></i> Explore
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="about">
+              <i class="fa-solid fa-info-circle"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="search">
+              <i class="fa-solid fa-search"></i> Search
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="profile-nav-link">
+              <i class="fa-solid fa-user"></i> Profile
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Pages Container -->
+      <div class="pages-container">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+          <div class="container">
+            <div class="hero">
+              <div class="hero-content">
+                <h1>Discover Your Next Favorite Book</h1>
+                <p>Browse our collection of thousands of titles across all genres.</p>
+                <button class="btn btn-primary" id="explore-books-btn"><a href="#" class="nav-link" data-page="explore"><i class="fa-solid fa-compass"></i> Explore Books</a></button>
+              </div>
+            </div>
+
+            <div class="featured-books">
+              <div id="featured-books-grid" class="books-grid">
+                <h1>Recommended for you</h1>
+                <!-- Books will be loaded here via JavaScript -->
+                <div class="loading">Loading books...</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Explore Page -->
+        <section id="explore-page" class="page">
+          <div class="container">
+              <div class="page-header">
+                  <h1><i class="fa-solid fa-compass"></i> Explore Books</h1>
+              </div>
+
+              <div class="explore-filters">
+                  <select id="genre-filter" class="filter-select">
+                      <option value="">All Genres</option>
+                  </select>
+              </div>
+
+              <!-- Books Grid Container -->
+              <div class="books-container">
+                  <div class="book-grid" id="explore-books-grid">
+                      <!-- Books will be loaded here -->
+                  </div>
+                  <div id="pagination">
+                      <!-- Pagination will be rendered here -->
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        <!-- Inside home.html -->
+        <section id="about-page" class="page">
+            <div class="container">
+            <div class="about-section">
+                <h1>About BookBuddy</h1>
+                <p>Welcome to <strong>BookBuddy</strong>, your personal AI-powered book recommendation system! Our goal is to help readers find the best books tailored to their interests using advanced machine learning techniques.</p>
+        
+                <h2>What We Do</h2>
+                <p>BookBuddy analyzes your reading patterns and preferences to provide personalized book recommendations. Whether you're looking for the next bestseller or a hidden gem, we've got you covered!</p>
+
+                <h2>Our Mission</h2>
+                <p>Our mission is to make reading more enjoyable and accessible by providing intelligent and curated book recommendations.</p>
+        
+                <h2>Meet the Team</h2>
+                <ul class="team-list">
+                <li><strong>Ujjwal Charasisa</strong> - AI Developer</li>
+                <li><strong>Sankalp Tiwari</strong> - Data Scientist</li>
+                <li><strong>Vivek Aggarwal</strong> - UX Designer</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <!-- Search Page -->
+        <section id="search-page" class="page">
+          <div class="container">
+            <div class="search-hero">
+              <h1><i class="fa-solid fa-book"></i> Book Search</h1>
+              <p>Find books by title, author, or book ID</p>
+              <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search books by title or author...">
+                </div>
+                <div id="search-results"></div>
+              </div>
+            </div>
+            <div id="search-results">
+              <p class="search-message">Start typing to search</p>
+              <div class="book-grid" id="search-books-grid">
+                <!-- Search results will be loaded here -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Book Detail Page -->
+        <section id="book-detail-page" class="page">
+          <div class="container">
+            <div class="book-detail-container">
+              <div class="book-detail-header">
+                <button class="btn btn-back" onclick="navigateBack()">
+                  <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+              </div>
+              <div class="book-detail-content">
+                <div class="book-detail-left">
+                  <div class="book-cover-large">
+                    <img src="" alt="Book cover" id="detail-book-cover">
+                  </div>
+                  <div class="book-rating-large">
+                    <i class="fa-solid fa-star"></i>
+                    <span id="detail-book-rating">0.0</span>
+                  </div>
+                  <div class="book-genres-large" id="detail-book-genres">
+                  </div>
+                </div>
+                <div class="book-detail-right">
+                  <h1 id="detail-book-title"></h1>
+                  <h2 id="detail-book-author"></h2>
+                  <div class="book-description">
+                    <h3>Description</h3>
+                    <p id="detail-book-description"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile-page" class="page">
+          <div class="container">
+              <div class="profile-header">
+                  <h1><i class="fa-solid fa-user"></i> Profile</h1>
+              </div>
+              
+              <div class="profile-content">
+                  <div class="profile-info">
+                      <h2 id="profile-name"></h2>
+                      <p id="profile-id"></p>
+                  </div>
+          </div>
+      </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <i class="fa-solid fa-book"></i>
+            <span>BookBuddy</span>
+          </div>
+          <p>&copy; 2025 BookBuddy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <i class="fa-solid fa-check toast-icon"></i>
+        <div class="toast-message">
+          <h4 id="toast-title">Success</h4>
+          <p id="toast-description">Operation completed successfully!</p>
+        </div>
+        <button class="toast-close">&times;</button>
+      </div>
+      <div class="toast-progress"></div>
+    </div>
+
+    <!-- Added Lovable script tag -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/config.js"></script>
+  </body>
+</html>

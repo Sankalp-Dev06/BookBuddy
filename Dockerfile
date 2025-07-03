@@ -20,5 +20,6 @@ COPY . .
 EXPOSE 5000
 
 # Run the app
-CMD ["python", "api.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "api:app"]
+
 

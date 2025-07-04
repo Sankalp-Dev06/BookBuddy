@@ -84,6 +84,11 @@ The implementation includes several memory optimizations:
 - Safe model saving that avoids CUDA OOM errors
 - CPU fallback for inference when GPU memory is constrained
 
+## Contributors
+-Ujjwal Chaurasia
+-Vivek Aggarwal
+-Sankalp Tiwari
+
 ## Preview
 ![image](https://github.com/user-attachments/assets/05cf4778-6bfa-4610-8c73-9920ea811600) ![image](https://github.com/user-attachments/assets/b5813a93-81cf-4ba9-8964-c81796285ac7)
 ![image](https://github.com/user-attachments/assets/28ed8773-ef86-4917-a33d-9a52381813b7) ![image](https://github.com/user-attachments/assets/9010e581-5b97-4baa-b398-23e629dab333)

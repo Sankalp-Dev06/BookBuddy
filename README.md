@@ -85,9 +85,6 @@ The implementation includes several memory optimizations:
 - CPU fallback for inference when GPU memory is constrained
 
 ## Preview
-![image](https://github.com/user-attachments/assets/05cf4778-6bfa-4610-8c73-9920ea811600)
-![image](https://github.com/user-attachments/assets/b5813a93-81cf-4ba9-8964-c81796285ac7)
-![image](https://github.com/user-attachments/assets/28ed8773-ef86-4917-a33d-9a52381813b7)
-![image](https://github.com/user-attachments/assets/9010e581-5b97-4baa-b398-23e629dab333)
-![image](https://github.com/user-attachments/assets/9709bfa3-d3e5-4257-86e6-228d417a732a)
-![image](https://github.com/user-attachments/assets/0ae4a25a-15eb-4f3d-b680-cf773f2f1d2b)
+![image](https://github.com/user-attachments/assets/05cf4778-6bfa-4610-8c73-9920ea811600) ![image](https://github.com/user-attachments/assets/b5813a93-81cf-4ba9-8964-c81796285ac7)
+![image](https://github.com/user-attachments/assets/28ed8773-ef86-4917-a33d-9a52381813b7) ![image](https://github.com/user-attachments/assets/9010e581-5b97-4baa-b398-23e629dab333)
+![image](https://github.com/user-attachments/assets/9709bfa3-d3e5-4257-86e6-228d417a732a) ![image](https://github.com/user-attachments/assets/0ae4a25a-15eb-4f3d-b680-cf773f2f1d2b)

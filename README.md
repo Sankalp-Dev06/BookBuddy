@@ -85,9 +85,10 @@ The implementation includes several memory optimizations:
 - CPU fallback for inference when GPU memory is constrained
 
 ## Contributors
--Ujjwal Chaurasia
--Vivek Aggarwal
--Sankalp Tiwari
+
+- Ujjwal Chaurasia
+- Vivek Aggarwal
+- Sankalp Tiwari
 
 ## Preview
 ![image](https://github.com/user-attachments/assets/05cf4778-6bfa-4610-8c73-9920ea811600) ![image](https://github.com/user-attachments/assets/b5813a93-81cf-4ba9-8964-c81796285ac7)
